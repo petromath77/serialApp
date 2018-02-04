@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SerialService } from '../shared/serial.service';
 
 @Component({
   selector: 'app-serials-detail',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SerialsDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(private serialService: SerialService) { }
 
   ngOnInit() {
   }

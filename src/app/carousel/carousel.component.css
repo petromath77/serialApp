@@ -1,11 +1,7 @@
-.main{
-    height: 100vh;
-}
 .carousel-item.active, .carousel-item-next, .carousel-item-prev{
     height: 250px;
 }
 .carousel{
     background-color: #000000d4;
-    margin-top: 65px;
     border-radius: 20px;
 }
