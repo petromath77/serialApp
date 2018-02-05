@@ -31,6 +31,7 @@ import {environment} from '../environments/environment';
     FormsModule,
     HttpModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
     AppRoutingModule
   ],
   providers: [],

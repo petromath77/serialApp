@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
 import { SerialService } from '../shared/serial.service';
-//import { SerialService } from '../shared/serial.service';
 
 @Component({
   selector: 'app-serials-edit',
@@ -14,5 +15,7 @@ export class SerialsEditComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  onSubmit(form: NgForm){
+    this.serialService.insertSerial(form.value);
+  }
 }
