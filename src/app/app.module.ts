@@ -14,6 +14,7 @@ import { SerialsDetailComponent } from './serials/serials-detail/serials-detail.
 import { AppRoutingModule } from './app-routing.module';
 import { SerialsEditComponent } from './serials/serials-edit/serials-edit.component';
 import {environment} from '../environments/environment';
+import { SerialService } from './serials/shared/serial.service';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import {environment} from '../environments/environment';
     AngularFireDatabaseModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SerialService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,9 +8,8 @@ import { CarouselComponent } from './carousel/carousel.component';
 const appRoutes: Routes = [
     {path: '', redirectTo: '/', pathMatch: 'full'},
     {path: '', component: CarouselComponent },
-    {path: 'serials', component: SerialsComponent, children:[
-        {path: ':id', component: SerialsDetailComponent}
-    ]},
+    {path: 'serials', component: SerialsComponent},
+    {path: 'serials/:id', component: SerialsDetailComponent},
     {path: 'new', component: SerialsEditComponent},
     //{path: 'shopping-list', component: ShoppingListComponent},
 ];

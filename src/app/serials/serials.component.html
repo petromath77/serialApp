@@ -2,7 +2,7 @@
   <div class="col-lg-3 col-md-4 serial_item" *ngFor="let serial of serialList">
       <img src="{{serial.image}}" alt="{{serial.image}}">
       <div class="head_text">
-        <a>{{serial.title}}</a>
+        <a [routerLink]="['/serials/'+serial.$key]">{{serial.title}}</a>
       </div> 
   </div>
 </div>
