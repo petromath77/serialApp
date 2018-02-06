@@ -3,6 +3,6 @@ export class Serial{
     title: string;
     year: number;
     genre: string;
-    image: [any];
+    image: [string];
     description: string;
 }

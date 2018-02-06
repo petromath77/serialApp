@@ -14,8 +14,22 @@ export class SerialsEditComponent implements OnInit {
   constructor(private serialService: SerialService) { }
 
   ngOnInit() {
+    this.resetForm();
   }
   onSubmit(form: NgForm){
     this.serialService.insertSerial(form.value);
+    this.resetForm(form);
+  }
+  resetForm(form?: NgForm){
+    if(form != null)
+      form.reset();
+    this.serialService.selectedSerial = {
+      $key: '',
+      title: '',
+      year: 0,
+      genre: '',
+      image: [''],
+      description: ''
+    }
   }
 }

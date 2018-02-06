@@ -1,0 +1,26 @@
+.serial_item{
+    text-align: center;
+    margin-bottom: 30px; 
+}
+.serial_item img{
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    max-height: 319px;
+}
+.head_text{
+    width: 100%;
+    background-color: #000000d4;
+    padding: 20px 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.head_text a{
+  font-size: 24px;
+  color: #ffffff80;
+}
+.head_text a:hover{
+    color: #ffffffbf;
+    text-decoration: none;
+}

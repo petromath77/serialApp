@@ -13,6 +13,9 @@ export class SerialService {
   getData(){
     return this.serialList;
   }
+  getSerial(index: number){
+    return this.selectedSerial[index];
+}
   insertSerial(serial: Serial){
     this.serialList.push({
       title: serial.title,
