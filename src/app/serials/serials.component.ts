@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SerialService } from './shared/serial.service';
-import { Serial } from './shared/serial.model';
+import { SerialService } from '../shared/serial.service';
+import { Serial } from '../shared/serial.model';
+import { Router, ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-serials',
@@ -10,7 +12,8 @@ import { Serial } from './shared/serial.model';
 })
 export class SerialsComponent implements OnInit {
   serialList: Serial[];
-  constructor(private serialService: SerialService) { }
+  //allSerials: any;
+  constructor(private serialService: SerialService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     var x = this.serialService.getData();
@@ -22,6 +25,10 @@ export class SerialsComponent implements OnInit {
         this.serialList.push(y as Serial);
       });
     });
+
+   //this.serialService.getSerials().subscribe(serials =>{
+    // this.allSerials = serials;
+   //});
   }
 
 }

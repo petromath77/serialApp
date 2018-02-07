@@ -1,0 +1,32 @@
+<div class="row justify-content-center">
+  <div class="col-md-8 edit">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+          <form #serialForm = "ngForm" (ngSubmit)="onSubmit(serialForm)">
+              <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="serialService.selectedSerial.$key">
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" name="title" id="title" #name="ngModel" [(ngModel)]="serialService.selectedSerial.title" required>
+              </div>
+              <div class="form-group">
+                <label for="year">Year</label>
+                <input type="text" class="form-control" name="year" id="year" #name="ngModel" [(ngModel)]="serialService.selectedSerial.year" required>
+              </div>
+              <div class="form-group">
+                <label for="genre">Genre</label>
+                <input type="text" class="form-control" name="genre" id="genre" #name="ngModel" [(ngModel)]="serialService.selectedSerial.genre" required>
+              </div>
+              <div class="form-group">
+                <label for="image">Image</label>
+                <input type="text" class="form-control" name="image" id="image" #name="ngModel" [(ngModel)]="serialService.selectedSerial.image" required>
+              </div>
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" name="description" rows="3" #name="ngModel" [(ngModel)]="serialService.selectedSerial.description" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" [disabled]="!serialForm.valid">Add Serial</button>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
