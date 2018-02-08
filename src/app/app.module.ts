@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SerialsEditComponent } from './serials-edit/serials-edit.component';
 import {environment} from '../environments/environment';
 import { SerialService } from './shared/serial.service';
+import { SerialNewComponent } from './serial-new/serial-new.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { SerialService } from './shared/serial.service';
     FooterComponent,
     SerialsComponent,
     SerialsDetailComponent,
-    SerialsEditComponent
+    SerialsEditComponent,
+    SerialNewComponent
   ],
   imports: [
     BrowserModule,

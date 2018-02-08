@@ -12,7 +12,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class SerialsComponent implements OnInit {
   serialList: Serial[];
-  //allSerials: any;
   constructor(private serialService: SerialService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -25,10 +24,6 @@ export class SerialsComponent implements OnInit {
         this.serialList.push(y as Serial);
       });
     });
-
-   //this.serialService.getSerials().subscribe(serials =>{
-    // this.allSerials = serials;
-   //});
   }
 
 }

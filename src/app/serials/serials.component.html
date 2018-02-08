@@ -4,7 +4,7 @@
       <div class="butt_group">
         <h3>{{serial.title}}</h3>
         <button class="btn btn_detail" [routerLink]="['/serials/'+serial.$key]"><i class="fa fa-eye"></i></button>
-        <a class="btn btn_link" href="http://google.com" target="_blank"><i class="fa fa-link"></i></a>
+        <button class="btn btn_detail" [routerLink]="['/edit-serial/'+serial.$key]">Edit</button>
       </div> 
   </div>
 </div>

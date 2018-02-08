@@ -19,17 +19,9 @@ export class SerialsDetailComponent implements OnInit {
   constructor(private serialService: SerialService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    //this.route.params.subscribe(
-      //(params: Params)=>{
-        //this.id = +params['id'];
-        //this.serial = this.serialService.getSerial(this.id);
-     // }
-   // );
-
     this.id = this.route.snapshot.params['id'];
     this.serialService.getSerialDetails(this.id).subscribe(
       serial =>{
-        console.log('serial details: '+JSON.stringify(serial));
         this.title = serial.title;
         this.year = serial.year;
         this.genre = serial.genre;
@@ -37,6 +29,7 @@ export class SerialsDetailComponent implements OnInit {
         this.description = serial.description;
       }
     );
+    
   }
 
 }

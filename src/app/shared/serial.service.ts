@@ -12,31 +12,20 @@ export class SerialService {
   constructor(private firebase: AngularFireDatabase) {
     this.serialList = this.firebase.list('serials');
    }
-   //getSerials(){
-    // this.serials = this.firebase.list('/serials').valueChanges();
-     //return this.serials;
-   //}
-
-
-
   getData(){
     return this.serialList;
   }
-  //getSerial(index: number){
-    //return this.selectedSerial[index];
-//}
-  insertSerial(serial: Serial){
-    this.serialList.push({
-      title: serial.title,
-      year: serial.year,
-      genre: serial.genre,
-      image: serial.image,
-      description: serial.description
-    });
+  addSerial(serialDetails){
+    var filteredSerial = JSON.parse(JSON.stringify(serialDetails));
+    return this.serialList.push(filteredSerial);
   }
 
   getSerialDetails(id){
     this.serialDetails = this.firebase.object('/serials/'+id).valueChanges();
     return this.serialDetails;
+  }
+  updateSerial(id, serialDetails){
+    var filteredSerial = JSON.parse(JSON.stringify(serialDetails));
+    return this.serialList.update(id, filteredSerial);
   }
 }    

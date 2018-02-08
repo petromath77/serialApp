@@ -9,3 +9,12 @@
     width: 100%;
     height: 100%;
 }
+a.btn_link{
+    color: #000;
+}
+.btn_link{
+    background-color: #9399a0;
+}
+.btn_link:hover{
+    background-color: #ccc;
+}

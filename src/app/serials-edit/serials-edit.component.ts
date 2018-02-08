@@ -1,37 +1,44 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-
+import { ActivatedRoute, Router } from '@angular/router';
 import { SerialService } from '../shared/serial.service';
+
 
 @Component({
   selector: 'app-serials-edit',
   templateUrl: './serials-edit.component.html',
   styleUrls: ['./serials-edit.component.css'],
-  providers:[SerialService]
+
 })
 export class SerialsEditComponent implements OnInit {
-
-  constructor(private serialService: SerialService) { }
+  id: any;
+  title;
+  year;
+  genre;
+  image;
+  description;
+  constructor(private serialService: SerialService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.resetForm();
+     this.id = this.route.snapshot.params['id'];
+     this.serialService.getSerialDetails(this.id).subscribe(
+      serial =>{
+        this.title = serial.title;
+        this.year = serial.year;
+        this.genre = serial.genre;
+        this.image = serial.image;
+        this.description = serial.description;
+      });
   }
-  
-  onSubmit(form: NgForm){
-    this.serialService.insertSerial(form.value);
-    this.resetForm(form);
-  }
-  resetForm(form?: NgForm){
-    if(form != null)
-      form.reset();
-    this.serialService.selectedSerial = {
-      $key: '',
-      title: '',
-      year: 0,
-      genre: '',
-      image: [''],
-      description: ''
+  submitEdit(){
+    let serial = {
+      title: this.title,
+      year: this.year,
+      genre: this.genre,
+      image: this.image,
+      description: this.description
     }
+    this.serialService.updateSerial(this.id, serial);
+    this.router.navigate(['/serials']);
   }
-  
+ 
 }

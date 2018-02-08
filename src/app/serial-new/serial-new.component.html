@@ -2,7 +2,7 @@
   <div class="col-md-8 edit">
     <div class="row justify-content-center">
       <div class="col-md-10">
-          <form #serialForm = "ngForm" (submit)="submitEdit()">
+          <form #serialForm = "ngForm" (submit)="onSubmit()">
              <!-- <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="serialService.selectedSerial.$key"> -->
               <div class="form-group">
                 <label for="title">Title</label>
@@ -25,9 +25,9 @@
                 <textarea class="form-control" id="description" name="description" rows="3" [(ngModel)]="description" required></textarea>
               </div>
               <button type="submit" class="btn btn-primary" [disabled]="!serialForm.valid">Add Serial</button>
-              <button type="submit" class="btn">Cancel</button>
           </form>
       </div>
     </div>
   </div>
 </div>
+

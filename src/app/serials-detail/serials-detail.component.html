@@ -10,6 +10,8 @@
             <h6>Genre: {{genre}}</h6>
             <p>{{description}}</p>
             <button class="btn" [routerLink]="['/serials']">Back</button>
+            <a class="btn btn_link" href="http://google.com" target="_blank"><i class="fa fa-link"></i></a>
+            <button class="btn btn_detail" [routerLink]="['/edit-serial/'+id]">Edit</button>
         </div>
       </div>
 
