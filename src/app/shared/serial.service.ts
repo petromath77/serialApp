@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class SerialService {
-  //selectedSerial: Serial = new Serial();
+  selectedSerial: Serial = new Serial();
   serialList: AngularFireList<any>;
   serials: Observable<any[]>;
   serialDetails: Observable<any>;

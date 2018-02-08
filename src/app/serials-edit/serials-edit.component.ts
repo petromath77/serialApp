@@ -14,9 +14,9 @@ export class SerialsEditComponent implements OnInit {
   constructor(private serialService: SerialService) { }
 
   ngOnInit() {
-    //this.resetForm();
+    this.resetForm();
   }
-  /*
+  
   onSubmit(form: NgForm){
     this.serialService.insertSerial(form.value);
     this.resetForm(form);
@@ -33,5 +33,5 @@ export class SerialsEditComponent implements OnInit {
       description: ''
     }
   }
-  */
+  
 }

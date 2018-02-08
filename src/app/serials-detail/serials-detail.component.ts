@@ -11,6 +11,11 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 export class SerialsDetailComponent implements OnInit {
   serial: Serial;
   id: any;
+  title;
+  year;
+  genre;
+  image;
+  description;
   constructor(private serialService: SerialService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -20,10 +25,16 @@ export class SerialsDetailComponent implements OnInit {
         //this.serial = this.serialService.getSerial(this.id);
      // }
    // );
+
     this.id = this.route.snapshot.params['id'];
     this.serialService.getSerialDetails(this.id).subscribe(
       serial =>{
         console.log('serial details: '+JSON.stringify(serial));
+        this.title = serial.title;
+        this.year = serial.year;
+        this.genre = serial.genre;
+        this.image = serial.image;
+        this.description = serial.description;
       }
     );
   }
