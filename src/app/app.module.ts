@@ -16,6 +16,7 @@ import { SerialsEditComponent } from './serials-edit/serials-edit.component';
 import {environment} from '../environments/environment';
 import { SerialService } from './shared/serial.service';
 import { SerialNewComponent } from './serial-new/serial-new.component';
+import { SerialsDeleteComponent } from './serials-delete/serials-delete.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SerialNewComponent } from './serial-new/serial-new.component';
     SerialsComponent,
     SerialsDetailComponent,
     SerialsEditComponent,
-    SerialNewComponent
+    SerialNewComponent,
+    SerialsDeleteComponent
   ],
   imports: [
     BrowserModule,

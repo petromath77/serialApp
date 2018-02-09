@@ -28,4 +28,7 @@ export class SerialService {
     var filteredSerial = JSON.parse(JSON.stringify(serialDetails));
     return this.serialList.update(id, filteredSerial);
   }
+  deleteSerial(id){
+    return this.serialList.remove(id);
+  }
 }    

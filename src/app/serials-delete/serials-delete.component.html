@@ -1,0 +1,14 @@
+<div class="row justify-content-center">
+  <div class="col-md-6 delete">
+    <div class="row">
+      <div class="col-md-8 text-center" *ngIf="serialTitle">
+          <h4>Are you sure about delete {{serialTitle}}?</h4>
+          <img src="{{serialImage}}" alt="">
+          <button class="btn" [routerLink]="['/serials']">Back</button>
+          <button class="btn btn_del" (click)="removeSerial()">Delete</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
