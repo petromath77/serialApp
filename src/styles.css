@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background: url('assets/back.jpg')no-repeat center -22px;
+    background: url('assets/back.jpg')no-repeat center 10px;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -8,3 +8,35 @@ input.ng-invalid.ng-dirty,
 textarea.ng-invalid.ng-dirty{
     border: 1px solid red;
 }
+.serial_item img{
+    max-height: 340px;
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    .serial_item img{
+        max-height: 280px;
+    }
+}
+    
+    /* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .serial_item img{
+        max-height: 280px;
+    }
+}
+    
+    /* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .serial_item img{
+        max-height: 320px;
+    }
+}
+    
+    /* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 576px) {
+    .serial_item img{
+        max-height: none;
+        height: auto;
+    }
+}
+    

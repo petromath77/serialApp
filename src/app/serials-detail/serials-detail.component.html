@@ -1,5 +1,5 @@
-<div class="row justify-content-center">
-    <div class="col-md-8 detail" *ngIf="title">
+<div class="row justify-content-center" *ngIf="title">
+    <div class="col-md-8 detail">
       <div class="row">
         <div class="col-md-4">
             <img src="{{image}}" alt="">
@@ -9,10 +9,11 @@
             <h5>Release Date: {{year}}</h5>
             <h6>Genre: {{genre}}</h6>
             <p>{{description}}</p>
-            <button class="btn" [routerLink]="['/serials']">Back</button>
-            <a class="btn btn_link" href="http://google.com" target="_blank"><i class="fa fa-link"></i></a>
-            <button class="btn btn_detail" [routerLink]="['/edit-serial/'+id]">Edit</button>
-            <button class="btn btn_detail" [routerLink]="['/delete-serial/'+id]">Delete</button>
+            <div class="align-self-end">
+                <button class="btn btn_link" [routerLink]="['/serials']">Back</button>
+                <button class="btn btn_link" [routerLink]="['/edit-serial/'+id]">Edit</button>
+                <a class="btn btn_link" href="{{link}}" target="_blank"><i class="fa fa-link"></i></a>
+            </div>
         </div>
       </div>
 

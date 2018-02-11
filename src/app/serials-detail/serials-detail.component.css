@@ -1,20 +1,23 @@
 .detail{
     width: 100%;
     background-color: #000000d4;
-    padding: 40px;
+    padding: 20px;
     border-radius: 15px;
     color: #ccc;
 }
 .detail img{
     width: 100%;
-    height: 100%;
+    height: auto;
+}
+.btn{
+    padding: 2px 20px;
 }
 a.btn_link{
     color: #000;
 }
 .btn_link{
-    background-color: #9399a0;
+    background-color: #ccc;
 }
 .btn_link:hover{
-    background-color: #ccc;
+    background-color: #9399a0;
 }

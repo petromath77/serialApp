@@ -17,38 +17,20 @@ export class SerialNewComponent implements OnInit {
  genre;
  image;
  description;
+ link;
  constructor(private serialService: SerialService, private router: Router, private route: ActivatedRoute) { }
 
  ngOnInit() {
-   //this.resetForm();
  }
- /*
- onSubmit(form: NgForm){
-   this.serialService.insertSerial(form.value);
-   this.resetForm(form);
- }
- resetForm(form?: NgForm){
-   if(form != null)
-     form.reset();
-   this.serialService.selectedSerial = {
-     $key: '',
-     title: '',
-     year: 0,
-     genre: '',
-     image: [''],
-     description: ''
-   }
- }
- */
  onSubmit(){
    let serial = {
      title: this.title,
      year: this.year,
      genre: this.genre,
      image: this.image,
-     description: this.description
+     description: this.description,
+     link: this.link
    }
-   console.log('Serial- ',serial);
    this.serialService.addSerial(serial);
    this.router.navigate(['serials']);
  }

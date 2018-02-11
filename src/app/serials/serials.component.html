@@ -1,10 +1,10 @@
-<div class="row">
-  <div class="col-lg-3 col-md-4 serial_item" *ngFor="let serial of serialList">
+<div class="row justify-content-center">
+  <div class="col-8 col-sm-6 col-md-4 col-lg-3 serial_item" *ngFor="let serial of serialList">
       <img src="{{serial.image}}" alt="{{serial.image}}">
       <div class="butt_group">
         <h3>{{serial.title}}</h3>
         <button class="btn btn_detail" [routerLink]="['/serials/'+serial.$key]"><i class="fa fa-eye"></i></button>
-        <button class="btn btn_detail" [routerLink]="['/edit-serial/'+serial.$key]">Edit</button>
+        <button class="btn btn_detail" [routerLink]="['/delete-serial/'+serial.$key]">Delete</button>
       </div> 
   </div>
 </div>

@@ -9,13 +9,13 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./serials-detail.component.css']
 })
 export class SerialsDetailComponent implements OnInit {
-  serial: Serial;
   id: any;
   title;
   year;
   genre;
   image;
   description;
+  link;
   constructor(private serialService: SerialService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -27,6 +27,7 @@ export class SerialsDetailComponent implements OnInit {
         this.genre = serial.genre;
         this.image = serial.image;
         this.description = serial.description;
+        this.link = serial.link;
       }
     );
     

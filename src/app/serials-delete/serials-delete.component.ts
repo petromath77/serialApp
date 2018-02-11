@@ -15,15 +15,14 @@ export class SerialsDeleteComponent implements OnInit {
 
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
-    this.serialService.getSerialDetails(this.id).subscribe(
-      serial =>{
-        this.serialTitle = serial.title;
-        this.serialImage = serial.image;
-      });
+        this.serialService.getSerialDetails(this.id).subscribe(
+          serial =>{
+            this.serialTitle = serial.title;
+            this.serialImage = serial.image;
+          });
   }
   removeSerial(){
-    this.serialService.deleteSerial(this.id);
-    this.router.navigate[''];
+      this.serialService.deleteSerial(this.id);
+      this.router.navigate['serials'];
   }
-
 }

@@ -7,7 +7,6 @@ import { Observable } from 'rxjs/Observable';
 export class SerialService {
   selectedSerial: Serial = new Serial();
   serialList: AngularFireList<any>;
-  serials: Observable<any[]>;
   serialDetails: Observable<any>;
   constructor(private firebase: AngularFireDatabase) {
     this.serialList = this.firebase.list('serials');

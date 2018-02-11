@@ -13,7 +13,7 @@ const appRoutes: Routes = [
     {path: 'serials', component: SerialsComponent},
     {path: 'serials/:id', component: SerialsDetailComponent},
     {path: 'edit-serial/:id', component: SerialsEditComponent},
-    {path: 'new', component: SerialNewComponent},
+    {path: 'add-serial', component: SerialNewComponent},
     {path: 'delete-serial/:id', component: SerialsDeleteComponent}
 ];
 

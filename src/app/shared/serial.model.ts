@@ -5,4 +5,5 @@ export class Serial{
     genre: string;
     image: [string];
     description: string;
+    link: string;
 }

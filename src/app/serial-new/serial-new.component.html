@@ -1,7 +1,7 @@
 <div class="row justify-content-center">
-  <div class="col-md-8 edit">
+  <div class="col-10 col-sm-8 edit">
     <div class="row justify-content-center">
-      <div class="col-md-10">
+      <div class="col-10 col-sm-10">
           <form #serialForm = "ngForm" (submit)="onSubmit()">
              <!-- <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="serialService.selectedSerial.$key"> -->
               <div class="form-group">
@@ -19,6 +19,10 @@
               <div class="form-group">
                 <label for="image">Image</label>
                 <input type="text" class="form-control" name="image" id="image" [(ngModel)]="image" required>
+              </div>
+              <div class="form-group">
+                <label for="link">Link</label>
+                <input type="text" class="form-control" name="link" id="link" [(ngModel)]="link" required>
               </div>
               <div class="form-group">
                 <label for="description">Description</label>

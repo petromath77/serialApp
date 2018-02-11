@@ -21,10 +21,14 @@
                 <input type="text" class="form-control" name="image" id="image" [(ngModel)]="image" required>
               </div>
               <div class="form-group">
+                <label for="link">Link</label>
+                <input type="text" class="form-control" name="link" id="link" [(ngModel)]="link" required>
+              </div>
+              <div class="form-group">
                 <label for="description">Description</label>
                 <textarea class="form-control" id="description" name="description" rows="3" [(ngModel)]="description" required></textarea>
               </div>
-              <button type="submit" class="btn btn-primary" [disabled]="!serialForm.valid">Add Serial</button>
+              <button type="submit" class="btn btn-primary" [disabled]="!serialForm.valid">Edit Serial</button>
               <button type="submit" class="btn">Cancel</button>
           </form>
       </div>

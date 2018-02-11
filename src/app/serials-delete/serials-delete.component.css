@@ -1,20 +1,21 @@
 .delete{
     width: 100%;
     background-color: #000000d4;
-    padding: 40px;
+    padding: 20px;
     border-radius: 15px;
     color: #ccc;
 }
 .delete img{
     width: 100%;
-    height: 100%;
+    height: auto;
+    margin: 20px 0;
 }
-a.btn_del{
-    color: #000;
+.btn{
+    padding: 2px 20px;
 }
 .btn_del{
-    background-color: #9399a0;
+    background-color: #ccc;
 }
 .btn_del:hover{
-    background-color: #ccc;
+    background-color: #9399a0;
 }

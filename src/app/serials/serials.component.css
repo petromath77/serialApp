@@ -7,12 +7,11 @@
     height: auto;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    max-height: 319px;
 }
 .butt_group{
     width: 100%;
     background-color: #000000d4;
-    padding: 20px 0;
+    padding: 15px 0 20px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
@@ -20,6 +19,7 @@
   font-size: 24px;
   color: #ffffff80;
   margin-bottom: 15px;
+  font-style: italic;
 }
 .btn{
     padding: 2px 20px;
@@ -29,9 +29,9 @@ a.btn_link{
 }
 .btn_detail,
 .btn_link{
-    background-color: #9399a0;
+    background-color: #ccc; 
 }
 .btn_detail:hover,
 .btn_link:hover{
-    background-color: #ccc;
+    background-color: #9399a0;
 }

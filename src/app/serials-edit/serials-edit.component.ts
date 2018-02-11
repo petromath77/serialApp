@@ -16,6 +16,7 @@ export class SerialsEditComponent implements OnInit {
   genre;
   image;
   description;
+  link;
   constructor(private serialService: SerialService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -27,6 +28,7 @@ export class SerialsEditComponent implements OnInit {
         this.genre = serial.genre;
         this.image = serial.image;
         this.description = serial.description;
+        this.link = serial.link;
       });
   }
   submitEdit(){
@@ -35,7 +37,8 @@ export class SerialsEditComponent implements OnInit {
       year: this.year,
       genre: this.genre,
       image: this.image,
-      description: this.description
+      description: this.description,
+      link: this.link
     }
     this.serialService.updateSerial(this.id, serial);
     this.router.navigate(['/serials']);
