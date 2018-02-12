@@ -2,3 +2,15 @@ a.nav-link{
     font-weight: bold;
     cursor: pointer;
 }
+.btn_log{
+    background-color: #ccc;
+    padding: 5px 10px;
+    margin-left: 10px;
+    color: #fff;
+}
+.btn_log:first-child{
+    margin-left: 0;
+}
+.btn_log:hover{
+    background-color: #9399a0;
+}

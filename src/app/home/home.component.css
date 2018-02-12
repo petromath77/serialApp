@@ -4,4 +4,22 @@
 .carousel{
     background-color: #000000d4;
     border-radius: 20px;
+    margin-top: 30px;
+}
+.carousel-caption{
+    bottom: 40px;
+}
+.carousel-caption img{
+    width: auto;
+    height: auto;
+}
+.no_butt{
+    bottom: 65px;
+}
+.btn{
+    background-color: #ccc;
+    color: #fff;
+}
+.btn:hover{
+    background-color: #9399a0;
 }
